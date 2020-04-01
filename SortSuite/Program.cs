@@ -10,6 +10,7 @@ namespace SortSuite
     {
         GenerateIntegers,
         GenerateDoubles,
+        SelectionSort,
         Exit
     }
 
@@ -56,6 +57,7 @@ namespace SortSuite
             {
                 case Choice.GenerateIntegers: return "Generate a list of random integers";
                 case Choice.GenerateDoubles: return "Generate a list of random doubles";
+                case Choice.SelectionSort: return "Selection Sort";
                 case Choice.Exit: return "Exit";
                 default: return "Unkown choice";
             }
