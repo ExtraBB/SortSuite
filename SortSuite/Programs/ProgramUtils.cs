@@ -26,6 +26,16 @@ namespace SortSuite.Programs
             return result;
         }
 
+        public static string ReadLineType()
+        {
+            string type;
+            while ((type = Console.ReadLine()) != "int" && type != "double")
+            {
+                Console.WriteLine("That's not a valid type");
+            }
+            return type;
+        }
+
         public static void WriteLineImpressive(string line)
         {
 

@@ -4,22 +4,24 @@ using System.Text;
 
 namespace SortSuite.SortingAlgorithms
 {
-    static class SelectionSort
+    class SelectionSort: ISortingAlgorithm
     {
-        public static void SortIntegers(int[] input)
+
+        public T[] Sort<T>(T[] input) where T : IComparable
         {
-            for(int i = 0; i < input.Length - 1; i++)
+            for (int i = 0; i < input.Length - 1; i++)
             {
                 int jMin = i;
-                for(int j = i+1; j < input.Length; j++)
+                for (int j = i + 1; j < input.Length; j++)
                 {
-                    if(input[j] < input[jMin])
+                    if (input[j].CompareTo(input[jMin]) < 0)
                     {
                         jMin = j;
                     }
                 }
                 SortingUtils.Swap(input, i, jMin);
             }
+            return input;
         }
     }
 }
