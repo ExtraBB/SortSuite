@@ -4,7 +4,7 @@ using System.Text;
 
 namespace SortSuite
 {
-    abstract class DataGenerator<T>
+    abstract class DataGenerator<T> where T : IComparable
     {
         protected Random random;
 

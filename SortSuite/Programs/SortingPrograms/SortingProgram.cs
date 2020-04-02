@@ -9,6 +9,7 @@ namespace SortSuite.Programs.SortingPrograms
     enum SortingType
     {
         SelectionSort,
+        QuickSort,
         Exit
     }
 
@@ -19,6 +20,7 @@ namespace SortSuite.Programs.SortingPrograms
             switch(type)
             {
                 case SortingType.SelectionSort: return new SelectionSort();
+                case SortingType.QuickSort: return new QuickSort();
                 default: throw new NotSupportedException();
             }
         }
@@ -50,6 +52,7 @@ namespace SortSuite.Programs.SortingPrograms
             switch (choice)
             {
                 case SortingType.SelectionSort: return "Selection Sort";
+                case SortingType.QuickSort: return "Quicksort";
                 case SortingType.Exit: return "Return to main menu";
                 default: return "Unkown choice";
             }

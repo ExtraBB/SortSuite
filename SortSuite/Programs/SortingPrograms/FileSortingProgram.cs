@@ -24,7 +24,7 @@ namespace SortSuite.Programs.SortingPrograms
             string outputFilename = Console.ReadLine();
 
             Console.WriteLine("What's the type of the entries? [int/double]");
-            string inputType = ProgramUtils.ReadLineType();
+            string inputType = ProgramUtils.ReadLineStringOption(new string[] { "int", "double" });
 
             Stopwatch stopWatch = new Stopwatch();
             string[] linesOut;
