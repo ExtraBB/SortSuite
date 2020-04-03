@@ -38,5 +38,10 @@ namespace SortSuite.SortingAlgorithms
             SortingUtils.Swap(input, i, high);
             return i;
         }
+
+        public T[] SortParallel<T>(T[] input) where T : IComparable
+        {
+            throw new NotImplementedException();
+        }
     }
 }

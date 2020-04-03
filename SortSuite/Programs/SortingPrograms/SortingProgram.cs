@@ -10,6 +10,7 @@ namespace SortSuite.Programs.SortingPrograms
     {
         SelectionSort,
         QuickSort,
+        MergeSort,
         Exit
     }
 
@@ -21,6 +22,7 @@ namespace SortSuite.Programs.SortingPrograms
             {
                 case SortingType.SelectionSort: return new SelectionSort();
                 case SortingType.QuickSort: return new QuickSort();
+                case SortingType.MergeSort: return new MergeSort();
                 default: throw new NotSupportedException();
             }
         }
@@ -53,6 +55,7 @@ namespace SortSuite.Programs.SortingPrograms
             {
                 case SortingType.SelectionSort: return "Selection Sort";
                 case SortingType.QuickSort: return "Quicksort";
+                case SortingType.MergeSort: return "Mergesort";
                 case SortingType.Exit: return "Return to main menu";
                 default: return "Unkown choice";
             }

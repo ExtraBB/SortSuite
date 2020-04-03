@@ -23,5 +23,9 @@ namespace SortSuite.SortingAlgorithms
             }
             return input;
         }
+        public T[] SortParallel<T>(T[] input) where T : IComparable
+        {
+            throw new NotImplementedException();
+        }
     }
 }
