@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace SortSuite.Programs
 {
@@ -11,6 +12,6 @@ namespace SortSuite.Programs
 
     interface ICLIProgram
     {
-        void Execute(string[] args);
+        Task Execute(string[] args);
     }
 }

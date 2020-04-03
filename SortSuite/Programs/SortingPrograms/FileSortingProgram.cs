@@ -26,7 +26,7 @@ namespace SortSuite.Programs.SortingPrograms
             Stopwatch stopWatch = new Stopwatch();
             string[] linesOut;
 
-            Console.WriteLine("Sorting...")
+            Console.WriteLine("Sorting...");
 
             double[] items = linesIn.Select(line => double.Parse(line)).ToArray();
             stopWatch.Start();

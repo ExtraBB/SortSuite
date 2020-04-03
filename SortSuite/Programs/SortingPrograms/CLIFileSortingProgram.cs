@@ -6,6 +6,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace SortSuite.Programs.SortingPrograms
 {
@@ -21,11 +22,14 @@ namespace SortSuite.Programs.SortingPrograms
 
             [Option('s', "sort", Required = true, HelpText = "Sorting algorithm [SelectionSort/QuickSort/MergeSort]")]
             public SortingType sortingAlgorithm { get; set; }
+
+            [Option('p', "parallel", Required = false, HelpText = "Run sorting algorithm in parallel. Only possible for: [MergeSort]")]
+            public bool parallel { get; set; }
         }
 
-        public void Execute(string[] args)
+        public async Task Execute(string[] args)
         {
-            Parser.Default.ParseArguments<Options>(args).WithParsed((Options opts) => {
+            await Parser.Default.ParseArguments<Options>(args).MapResult(async (Options opts) => {
                 ISortingAlgorithm algorithm = GetSortingAlgorithm(opts.sortingAlgorithm);
                 string[] linesIn = File.ReadAllLines(opts.inputFile);
 
@@ -36,7 +40,10 @@ namespace SortSuite.Programs.SortingPrograms
 
                 double[] items = linesIn.Select(line => double.Parse(line)).ToArray();
                 stopWatch.Start();
-                algorithm.Sort(items);
+                if (opts.parallel)
+                    await algorithm.SortParallel(items);
+                else
+                    algorithm.Sort(items);
                 stopWatch.Stop();
                 linesOut = items.Select(item => item.ToString()).ToArray();
 
@@ -44,7 +51,8 @@ namespace SortSuite.Programs.SortingPrograms
                 File.WriteAllLines(opts.outputFile, linesOut);
 
                 ProgramUtils.WriteLineImpressive($"Succesfully sorted the values in {opts.inputFile} and wrote the result to {opts.outputFile} in {stopWatch.ElapsedMilliseconds} ms");
-            });
+                return 1;
+            }, (_) => Task.FromResult(0));
         }
     }
 }

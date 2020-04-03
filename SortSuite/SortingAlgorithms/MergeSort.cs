@@ -44,7 +44,7 @@ namespace SortSuite.SortingAlgorithms
             }
             return input;
         }
-        public T[] SortParallel<T>(T[] input) where T : IComparable
+        public async Task<T[]> SortParallel<T>(T[] input) where T : IComparable
         {
             if (input.Length <= 1) return input;
 
@@ -53,10 +53,10 @@ namespace SortSuite.SortingAlgorithms
             T[] inputA = SortingUtils.Take(input, 0, middle);
             T[] inputB = SortingUtils.Take(input, middle, input.Length);
 
-            Parallel.Invoke(
-                () => Sort(inputA),
-                () => Sort(inputB)
-            );
+            Task tA = Task.Run(() => Sort(inputA));
+            Task tB = Task.Run(() => Sort(inputB));
+
+            await Task.WhenAll(tA, tB);
 
             int iA = 0, iB = 0;
             for (int i = 0; i < input.Length; i++)
