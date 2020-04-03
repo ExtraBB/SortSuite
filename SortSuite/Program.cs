@@ -21,6 +21,13 @@ namespace SortSuite
     {
         static void Main(string[] args)
         {
+            if(args.Length > 0)
+            {
+                ICLIProgram program = new CLIFileSortingProgram();
+                program.Execute(args);
+                return;
+            }
+
             ProgramType choice;
             do
             {

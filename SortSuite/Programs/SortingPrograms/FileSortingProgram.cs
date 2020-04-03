@@ -23,31 +23,16 @@ namespace SortSuite.Programs.SortingPrograms
             Console.WriteLine("What's the output file name?");
             string outputFilename = Console.ReadLine();
 
-            Console.WriteLine("What's the type of the entries? [int/double]");
-            string inputType = ProgramUtils.ReadLineStringOption(new string[] { "int", "double" });
-
             Stopwatch stopWatch = new Stopwatch();
             string[] linesOut;
 
-            if (inputType == "int") {
-                int[] items = linesIn.Select(line => int.Parse(line)).ToArray();
-                stopWatch.Start();
-                algorithm.Sort(items);
-                stopWatch.Stop();
-                linesOut = items.Select(item => item.ToString()).ToArray();
-            } 
-            else if (inputType == "double")
-            {
-                double[] items = linesIn.Select(line => double.Parse(line)).ToArray();
-                stopWatch.Start();
-                algorithm.Sort(items);
-                stopWatch.Stop();
-                linesOut = items.Select(item => item.ToString()).ToArray();
-            }
-            else
-            {
-                throw new NotSupportedException();
-            }
+            Console.WriteLine("Sorting...")
+
+            double[] items = linesIn.Select(line => double.Parse(line)).ToArray();
+            stopWatch.Start();
+            algorithm.Sort(items);
+            stopWatch.Stop();
+            linesOut = items.Select(item => item.ToString()).ToArray();
 
             File.WriteAllLines(outputFilename, linesOut);
 

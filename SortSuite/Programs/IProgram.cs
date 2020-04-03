@@ -8,4 +8,9 @@ namespace SortSuite.Programs
     {
         void Execute();
     }
+
+    interface ICLIProgram
+    {
+        void Execute(string[] args);
+    }
 }
