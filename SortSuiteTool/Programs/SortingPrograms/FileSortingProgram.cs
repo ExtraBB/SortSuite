@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Diagnostics;
-using SortSuite.SortingAlgorithms;
+using SortSuite;
 using System.Linq;
 
-namespace SortSuite.Programs.SortingPrograms
+namespace SortSuiteTool.Programs.SortingPrograms
 {
     class FileSortingProgram : SortingProgram, IProgram
     {

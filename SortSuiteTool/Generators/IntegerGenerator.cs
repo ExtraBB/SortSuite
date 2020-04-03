@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace SortSuite.Generators
+namespace SortSuiteTool.Generators
 {
     class IntegerGenerator : DataGenerator<int>
     {

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace SortSuite
+namespace SortSuiteTool
 {
     abstract class DataGenerator<T> where T : IComparable
     {

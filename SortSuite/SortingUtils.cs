@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace SortSuite.SortingAlgorithms
+namespace SortSuite
 {
     static class SortingUtils
     {

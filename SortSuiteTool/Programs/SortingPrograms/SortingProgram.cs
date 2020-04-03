@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Linq;
-using SortSuite.SortingAlgorithms;
+using SortSuite;
 
-namespace SortSuite.Programs.SortingPrograms
+namespace SortSuiteTool.Programs.SortingPrograms
 {
     enum SortingType
     {

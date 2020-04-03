@@ -1,5 +1,5 @@
 ﻿using CommandLine;
-using SortSuite.SortingAlgorithms;
+using SortSuite;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SortSuite.Programs.SortingPrograms
+namespace SortSuiteTool.Programs.SortingPrograms
 {
     class CLIFileSortingProgram : SortingProgram, ICLIProgram
     {

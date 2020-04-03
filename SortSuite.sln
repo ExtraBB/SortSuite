@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29920.165
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SortSuite", "SortSuite\SortSuite.csproj", "{C38F0F5D-ED15-44A0-85C1-E6CAD9CF1A04}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SortSuiteTool", "SortSuiteTool\SortSuiteTool.csproj", "{C38F0F5D-ED15-44A0-85C1-E6CAD9CF1A04}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SortSuite", "SortSuite\SortSuite.csproj", "{57D51075-3B31-4441-B49A-0865F9BACC7F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{C38F0F5D-ED15-44A0-85C1-E6CAD9CF1A04}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C38F0F5D-ED15-44A0-85C1-E6CAD9CF1A04}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C38F0F5D-ED15-44A0-85C1-E6CAD9CF1A04}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57D51075-3B31-4441-B49A-0865F9BACC7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57D51075-3B31-4441-B49A-0865F9BACC7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57D51075-3B31-4441-B49A-0865F9BACC7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57D51075-3B31-4441-B49A-0865F9BACC7F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

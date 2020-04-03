@@ -1,13 +1,13 @@
-﻿using SortSuite.Programs;
-using SortSuite.Programs.GenerationPrograms;
-using SortSuite.Programs.SortingPrograms;
+﻿using SortSuiteTool.Programs;
+using SortSuiteTool.Programs.GenerationPrograms;
+using SortSuiteTool.Programs.SortingPrograms;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace SortSuite
+namespace SortSuiteTool
 {
     enum ProgramType
     {

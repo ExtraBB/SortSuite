@@ -1,11 +1,11 @@
-﻿using SortSuite.Generators;
-using SortSuite.SortingAlgorithms;
+﻿using SortSuiteTool.Generators;
+using SortSuite;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 
-namespace SortSuite.Programs.SortingPrograms
+namespace SortSuiteTool.Programs.SortingPrograms
 {
     class BenchmarkSortingProgram: SortingProgram, IProgram
     {

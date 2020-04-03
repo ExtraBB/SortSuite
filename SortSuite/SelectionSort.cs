@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SortSuite.SortingAlgorithms
+namespace SortSuite
 {
-    class SelectionSort: ISortingAlgorithm
+    public class SelectionSort: ISortingAlgorithm
     {
 
         public T[] Sort<T>(T[] input) where T : IComparable
